@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+body {
+margin: 0px;
+padding: 0px;
+}
+</style>
+</head>
+<body>
+<canvas id="myCanvas" width="578" height="200"></canvas>
+<script>
+var canvas = document.getElementById('myCanvas');
+var context = canvas.getContext('2d');
+ 
+context.font = "18pt Helvetica";
+context.fillText("No shadow", 90, 40);
+ 
+context.shadowOffsetX = 3;
+context.shadowOffsetY = 3;
+context.fillText("No shadow", 90, 80);
+ 
+context.shadowColor = "rgba(0,0,0,0.3)";
+context.fillText("Bad shadow", 90, 120);
+ 
+context.shadowBlur = 4;
+context.fillText("Smooth shadow", 90, 160);
+</script>
+</body>
+</html>
